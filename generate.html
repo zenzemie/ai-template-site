@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generate Template</title>
+</head>
+<body>
+  <h1>Generate Your AI Template</h1>
+
+  <input id="token" placeholder="Enter your token" />
+  <br><br>
+  <textarea id="prompt" placeholder="Describe your template" rows="5" cols="30"></textarea>
+  <br><br>
+  <button onclick="generate()">Generate</button>
+
+  <pre id="result"></pre>
+
+  <script>
+    function generate() {
+      const token = document.getElementById("token").value;
+      const prompt = document.getElementById("prompt").value;
+
+      // Temporary: simulate AI response
+      if (!token || !prompt) {
+        document.getElementById("result").textContent = "Enter both token and template description.";
+        return;
+      }
+
+      document.getElementById("result").textContent =
+        "Your AI-generated template will appear here:\n\n" + prompt + " [SIMULATED OUTPUT]";
+    }
+  </script>
+</body>
+</html>
