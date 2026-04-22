@@ -1,3 +1,6 @@
+const aiRoutes = require("./routes/ai");
+app.use("/ai", aiRoutes)
+
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
